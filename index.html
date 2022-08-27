@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Youtube">
+        <title>YouTube Growth Predictor</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    <header style="text-align:center"/header>
+        <div style="background-color:rgb(223, 198, 134)"
+            <a href="index.html" class="logo"><b>Subscriber Predictor</b> <br> 
+                <i class="fa fa-youtube-play" style="font-size:48px;color:red"></i>
+            </a>
+        </div>
+    </header>
+
+    <style>
+        .containor{
+            background-color: aqua;
+            border: 55cm;
+        }
+    </style>
+    <div class="containor" style="text-align:center" style="background-color:aqua">
+        <form>
+            <br><br>
+            <label for="a">Current Subscriber &nbsp;&nbsp</label>
+            <input type="number" id="a"><br><br>
+            <label for="r">Growth Rate &nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp &nbsp;&nbsp;</label>
+            <input type="number" id="r"><br><br>
+            <label for="x">Time Interval&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp &nbsp;&nbsp</label>
+            <input type="number" id="x"><br><br>
+        </form>
+        <button type="button" onclick="myFunction()"> Predict!</button>
+        <p>The Result is : <br>
+            <span id = "result"></span>
+            </p>
+    </div>
+       
+    
+<script>
+function myFunction() { 
+    var p = document.getElementById("a").valueAsNumber;
+    var q = document.getElementById("r").valueAsNumber;
+    var n = document.getElementById("x").valueAsNumber;
+    var y = 1+q;
+    var b = Math.pow(y,n);
+    var calSub = p*b;
+     document.getElementById("result").innerHTML = calSub;
+      
+}
+</script>
+    
+    </body>
